@@ -1,0 +1,1 @@
+export const fnWillNotBeUsed = () => 'never used fn return value'
