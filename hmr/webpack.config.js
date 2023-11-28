@@ -12,8 +12,9 @@ module.exports = {
         concatenateModules: false,
     },
     devServer: {
+        hot: true,
         devMiddleware: {
-            writeToDisk: true
+            writeToDisk: false
         },
         static: ['dist', 'public'],
     }
