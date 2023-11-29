@@ -1,4 +1,5 @@
 const RuntimeModule = require('webpack/lib/RuntimeModule')
+const { publicPath } = require('webpack/lib/RuntimeGlobals')
 
 class XModule extends RuntimeModule {
     constructor() {
@@ -6,6 +7,15 @@ class XModule extends RuntimeModule {
 	}
     generate() {
         return 'console.log("x")'
+    }
+}
+
+class ModifyPPModule extends RuntimeModule {
+    constructor() {
+		super("modify publich patch", RuntimeModule.STAGE_BASIC);
+	}
+    generate() {
+        return `${publicPath} = 'localhost'`
     }
 }
 
@@ -21,6 +31,10 @@ exports.default = {
                     compilation.addRuntimeModule(
                         chunk,
                         new XModule()
+                    );
+                    compilation.addRuntimeModule(
+                        chunk,
+                        new ModifyPPModule()
                     );
                 })
             })
