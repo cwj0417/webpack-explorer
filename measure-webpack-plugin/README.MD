@@ -1,5 +1,28 @@
-## (尝试阶段)探测webpack build阶段卡在哪
+## measure-webpack-plugin
 
-目前打了一些build阶段的hooks, 留下的几个确实可以看出每个模块build的细分阶段耗时
+analyze your webpack compile process.
 
-会以此为原理开发measure-plugin, 保留这个来进行思路保留以及未来可能的debug
+## useage
+
+if you use webpack.config.js.
+
+```js
+const MeasureWebpackPlugin = require('measure-webpack-plugin')
+module.exports = {
+    ...{
+        yourConfs: ''
+    },
+    plugins: [new MeasureWebpackPlugin()]
+}
+```
+
+or you use webpack-chain scripting your webpack config.
+
+```js
+config.plugin('measure').use(require('measure-webpack-plugin'));
+```
+
+## check analyze result
+
+visit `yourHost/measureResult.html` on dev,
+or visit `yourDistDir/measureResult.html`.
