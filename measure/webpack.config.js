@@ -76,6 +76,31 @@ module.exports = {
                 // compilation.buildQueue.hooks.result.tap(pluginname, (m) => {
                 //     console.log('(out queue) build', formatId(m.resource))
                 // });
+
+                // compilation.buildQueue.hooks.result.tap(pluginname, (module) => {
+                //     const id = formatId(module.resource);
+                //     console.log('outttttttttttt', id);
+                //   });
+
+                //   compilation.processDependenciesQueue.hooks.added.tap(pluginname, (module) => {
+                //     const id = formatId(module.resource);
+                //     console.log('--------start process dep', id);
+                //   });
+
+
+                // compilation.factorizeQueue.hooks.added.tap(pluginname, (param) => {
+                //     console.log(param?.originModule?.resource ?? 'xxxxxx', 'in')
+                //     console.log(Object.keys(param));
+                //     console.log(param.dependencies.map(i => i.request));
+                //     const id = formatId(param.originModule.resource);
+                //     console.log('--------start factorizeQueue-----', id);
+                // });
+
+                // compilation.factorizeQueue.hooks.result.tap(pluginname, (param) => {
+                //     console.log(param?.originModule?.resource ?? 'zzzzzzz', 'out')
+                //     const id = formatId(param.originModule.resource);
+                //     console.log('-------------------out factorizeQueue-----', id);
+                // });
             })
         }
     }]
