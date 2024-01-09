@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  lodash:
+    specifier: ^4.17.21
+    version: registry.npmjs.org/lodash@4.17.21
   webpack:
     specifier: ^5.88.1
     version: registry.npmjs.org/webpack@5.89.0(webpack-cli@5.1.4)
@@ -1647,6 +1650,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       p-locate: registry.npmjs.org/p-locate@4.1.0
+    dev: false
+
+  registry.npmjs.org/lodash@4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz}
+    name: lodash
+    version: 4.17.21
     dev: false
 
   registry.npmjs.org/media-typer@0.3.0:
