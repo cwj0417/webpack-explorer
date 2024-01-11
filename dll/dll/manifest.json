@@ -1,0 +1,21 @@
+{
+  "name": "entry_47f238fa4dd22b75d637",
+  "content": {
+    "./src/index.js": {
+      "id": "./src/index.js",
+      "buildMeta": {
+        "exportsType": "namespace"
+      },
+      "exports": []
+    },
+    "./src/justplain.js": {
+      "id": "./src/justplain.js",
+      "buildMeta": {
+        "exportsType": "namespace"
+      },
+      "exports": [
+        "default"
+      ]
+    }
+  }
+}
