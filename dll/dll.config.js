@@ -14,7 +14,7 @@ exports.default = {
     plugins: [new webpack.DllPlugin({
         context: __dirname,
         name: '[name]_[fullhash]',
-        path: __dirname + '/dll/manifest.json',
+        path: __dirname + '/dll/[name]-manifest.json',
         format: true,
     })]
 }
